@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radar</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- REPLACE API BELOW -->
+	<script type="text/javascript" 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNN6te3IMFfZIjqyl-7PoXCHbmtbBUxaE&sensor=false">
+	</script>
+  <script type="text/javascript">
+    function initialize() {
+	  var myLatlng = new google.maps.LatLng(39.8, -86.1);
+	  var mapOptions = {
+	    zoom: 6,
+	    disableDefaultUI: "false",
+	    center: myLatlng,
+	    mapTypeId: google.maps.MapTypeId.TERRAIN
+	  }
+	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+<body>
+  <div class="heading">Current Radar Conditions</div>
+  <div class="radar">
+  	<img src="http://api.wunderground.com/api/56c79fc4b6426be2/radar/image.png?centerlat=39.7&centerlon=-86.1&radius=390&width=1366&height=768&newmaps=0">
+  </div>
+  <div id="map-canvas"></div>
+</body>
+</html>

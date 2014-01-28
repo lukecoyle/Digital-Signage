@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- REPLACE API BELOW -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNN6te3IMFfZIjqyl-7PoXCHbmtbBUxaE&sensor=false">
+  </script>
+  <script type="text/javascript">
+    function initialize() {
+  	  var myLatlng = new google.maps.LatLng(39.82828, -86.14996);
+  	  var mapOptions = {
+  	    zoom: 11,
+        disableDefaultUI: "false",
+  	    center: myLatlng,
+  	    mapTypeId: google.maps.MapTypeId.ROADMAP
+  	  }
+  	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  	  var trafficLayer = new google.maps.TrafficLayer();
+  	  trafficLayer.setMap(map);
+	  }
+	  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+<body>
+  <div class="heading">Current Traffic Conditions for Indianapolis, IN</div>
+  <div class="key"><img src="traffic-key.jpg" ></div>
+  <div id="map-canvas"/>
+</body>
+</html>

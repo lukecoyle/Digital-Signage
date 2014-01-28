@@ -1,0 +1,300 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+}
+.wrap {
+	width: 1366px;
+	height: 768px;
+	position: relative;
+	background-image: url('images/weather-bg.jpg');
+}
+.heading {
+	font-size: 3.4em;
+	font-weight: bold;
+	color: #FFF;
+	width: 100%;
+	padding: 10px 30px;
+	text-shadow: 2px 2px 1px #333;
+	background-color: transparent;
+  	background-color: rgba(11, 61, 118, .4);
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*  Current Day ------------------------------------- */
+#day0 {
+	position: absolute;
+	top: 120px;
+	left: 50px;
+	width: 440px;
+	height: 625px;
+	background-color: transparent;
+  	background-color: rgba(256,256, 256, .9);
+	border-radius: 12px;
+	-webkit-box-shadow: 1px 1px 1px 2px #888;
+	box-shadow: 1px 1px 1px 2px #888;
+}
+#day0 .current {
+	font-size: 3em;
+	color: #C00;
+	position: absolute;
+	top: 345px;
+	right: 20px;
+}
+#day0 .current span {
+	font-size: .4em;
+	color: #555;
+	vertical-align: text-top;
+	display: inline-block;
+	padding-top: .4em;
+}
+#day0 .current span.today-current {
+	font-size: .35em;
+	color: #888;
+	padding-top: .9em;
+}
+#day0 .day {
+	font-size: 2.5em;
+	font-weight: bold;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+#day0 .date {
+	font-size: 1.2em;
+	color: #888;
+	position: absolute;
+	top: 64px;
+	left: 20px;
+}
+#day0 .icon {
+	position: absolute;
+	top: 64px;
+	left: 92px;
+}
+#day0 .high {
+	font-size: 3.3em;
+	color: #C00;
+	position: absolute;
+	top: 330px;
+	left: 20px;
+}
+#day0 .high span {
+	font-size: .5em;
+	color: #555;
+	vertical-align: text-top;
+	display: inline-block;
+	padding-top: .4em;
+}
+#day0 .high span.today-high {
+	font-size: .35em;
+	color: #888;
+	padding-top: .6em;
+}
+#day0 .low {
+	font-size: 2.6em;
+	color: #009;
+	position: absolute;
+	top: 370px;
+	left: 98px;
+}
+#day0 .low span {
+	font-size: .5em;
+	color: #555;
+	vertical-align: text-top;
+	display: inline-block;
+	padding-top: .4em;
+}
+#day0 .low span.today-low {
+	font-size: .4em;
+	color: #888;
+	vertical-align: text-bottom;
+	padding-bottom: .6em;
+}
+#day0 .chance {
+	font-size: 1.7em;
+	color: #777;
+	position: absolute;
+	top: 255px;
+	left: 20px;
+}
+#day0 .chance span {
+	font-size: .6em;
+	display: block;
+	margin-bottom: .2em;
+	color: #888;
+	text-transform: uppercase;
+}
+#day0 .summary {
+	font-size: 1.5em;
+	line-height: 1.4;
+	max-width: 408px;
+	position: absolute;
+	top: 440px;
+	left: 20px;
+}
+/*  Future Days ------------------------------------- */
+#day1,#day2,#day3,#day4,#day5,#day6 {
+	position: absolute;
+	left: 540px;
+	width: 776px;
+	height: 90px;
+	background-color: transparent;
+  	background-color: rgba(256,256, 256, .9);
+	border-radius: 12px;
+	-webkit-box-shadow: 1px 1px 1px 2px #888;
+	box-shadow: 1px 1px 1px 2px #888;
+}
+#day1 {
+	top: 120px;
+}
+#day2 {
+	top: 227px;
+}
+#day3 {
+	top: 334px;
+}
+#day4 {
+	top: 441px;
+}
+#day5 {
+	top: 548px;
+}
+#day6 {
+	top: 655px;
+}
+#day1 .day,#day2 .day,#day3 .day,#day4 .day,#day5 .day,#day6 .day {
+	font-size: 1.8em;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#day1 .date,#day2 .date,#day3 .date,#day4 .date,#day5 .date,#day6 .date {
+	font-size: 1.2em;
+	color: #888;
+	position: absolute;
+	top: 40px;
+	left: 10px;	
+}
+#day1 .icon,#day2 .icon,#day3 .icon,#day4 .icon,#day5 .icon,#day6 .icon {
+	position: absolute;
+	top: 5px;
+	left: 200px;
+}
+#day1 .icon img,#day2 .icon img,#day3 .icon img,#day4 .icon img,#day5 .icon img,#day6 .icon img {
+	width: 80px;
+	height: auto;
+}
+#day1 .high,#day2 .high,#day3 .high,#day4 .high,#day5 .high,#day6 .high {
+	font-size: 3em;
+	color: #C00;
+	position: absolute;
+	top: 14px;
+	left: 315px;
+}
+#day1 .high span,#day2 .high span,#day3 .high span,#day4 .high span,#day5 .high span,#day6 .high span {
+	font-size: .5em;
+	color: #555;
+	vertical-align: text-top;
+	display: inline-block;
+	padding-top: .4em;
+}
+#day1 .low,#day2 .low,#day3 .low,#day4 .low,#day5 .low,#day6 .low {
+	font-size: 2.3em;
+	color: #009;
+	position: absolute;
+	top: 40px;
+	left: 395px;
+}
+#day1 .low span,#day2 .low span,#day3 .low span,#day4 .low span,#day5 .low span,#day6 .low span {
+	font-size: .5em;
+	color: #555;
+	vertical-align: text-top;
+	display: inline-block;
+	padding-top: .4em;
+}
+#day1 .chance,#day2 .chance,#day3 .chance,#day4 .chance,#day5 .chance,#day6 .chance {
+font-size: 1.4em;
+	color: #777;
+	position: absolute;
+	top: 10px;
+	left: 490px;
+}
+#day1 .chance span,#day2 .chance span,#day3 .chance span,#day4 .chance span,#day5 .chance span,#day6 .chance span {
+	font-size: .6em;
+	display: block;
+	margin-bottom: .2em;
+	color: #888;
+	text-transform: uppercase;
+}
+#day1 .summary,#day2 .summary,#day3 .summary,#day4 .summary,#day5 .summary,#day6 .summary {
+	font-size: 1.3em;
+	line-height: 1.4;
+	max-width: 274px;
+	max-height: 2.8em;
+	overflow: hidden;
+	position: absolute;
+	top: 20px;
+	left: 490px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
